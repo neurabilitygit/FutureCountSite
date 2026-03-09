@@ -1,0 +1,1 @@
+.accent-word{color:var(--rust)}.kicker-line{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}.kicker-line:before{content:"";width:44px;height:1px;background:var(--line-strong)}.section-label{font-size:.9rem;font-weight:700;color:var(--rust);letter-spacing:.08em;text-transform:uppercase}

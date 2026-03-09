@@ -1,0 +1,1 @@
+const t=document.querySelector('[data-nav-toggle]'),n=document.querySelector('[data-nav]');if(t&&n){t.addEventListener('click',()=>{n.classList.toggle('open');t.setAttribute('aria-expanded',String(n.classList.contains('open')));});}

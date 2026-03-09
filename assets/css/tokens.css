@@ -1,0 +1,8 @@
+:root{
+--parchment:#F3EDE2;--parchment-2:#E8E1D4;--charcoal:#2B2B2B;--charcoal-2:#48433d;
+--olive:#5E6B4E;--olive-dark:#47513c;--rust:#B24A2E;--rust-dark:#963A20;
+--line:rgba(43,43,43,.14);--line-strong:rgba(43,43,43,.24);--card:#FBF7F1;
+--max:1180px;--text:clamp(1rem,.95rem + .18vw,1.125rem);--small:.94rem;
+--h1:clamp(3.2rem,5vw,5.6rem);--h2:clamp(2rem,3vw,3.2rem);--h3:clamp(1.25rem,1.1rem + .8vw,1.6rem);
+--radius:24px;--radius-sm:14px;--shadow:0 18px 50px rgba(38,30,22,.08);
+}
