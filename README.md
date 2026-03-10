@@ -15,3 +15,8 @@ Files:
 
 Draft note:
 - Replace the Book a Strategy Call button href on contact.html with your live calendar URL.
+
+
+Clean URLs updated:
+- services/ (served from services/index.html)
+- about/ (served from about/index.html)
