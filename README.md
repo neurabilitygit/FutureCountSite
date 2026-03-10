@@ -20,3 +20,12 @@ Draft note:
 Clean URLs updated:
 - services/ (served from services/index.html)
 - about/ (served from about/index.html)
+
+Palette update applied:
+- Parchment #F5EDE3
+- Warm Sand #E7DCCB
+- Dark Brown #2F2925
+- Mocha #5B524A
+- Deep Olive #5F6B3F
+- Forest Olive #4C5631
+- Rust #B24A2E
