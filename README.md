@@ -29,3 +29,8 @@ Palette update applied:
 - Deep Olive #5F6B3F
 - Forest Olive #4C5631
 - Rust #B24A2E
+
+Rust palette update applied:
+- Header and footer now use the same rust accent family as the hero font accent
+- Warm parchment backgrounds retained
+- Structural accents shifted from olive to rust
