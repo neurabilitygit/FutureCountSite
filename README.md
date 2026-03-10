@@ -34,3 +34,13 @@ Rust palette update applied:
 - Header and footer now use the same rust accent family as the hero font accent
 - Warm parchment backgrounds retained
 - Structural accents shifted from olive to rust
+
+Logo contrast update applied:
+- Header and footer now use transparent light mark PNGs for better contrast on rust backgrounds
+- Standalone F section markers replaced with transparent rust mark PNGs on light surfaces
+
+Header/footer logo update applied:
+- Added assets/img/futurecount-logo-header-footer.png
+- Logo background matches header rust background
+- F mark enlarged to occupy approximately 85% of the logo image
+- Header and footer now use the exact same PNG asset
