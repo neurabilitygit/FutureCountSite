@@ -1,0 +1,168 @@
+<svg width="720" height="540" viewBox="0 0 720 540" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Partnership Ecosystems are Essential</title>
+  <desc id="desc">Animated chart showing company growth and profitability increasing with organizational size and complexity, alongside the FutureCount role across growth stages.</desc>
+  <style>
+    :root {
+      --bg: #F5EDE3;
+      --ink: #2E2A26;
+      --muted: #7C746B;
+      --border: #746E67;
+      --shadow: rgba(46,42,38,.12);
+      --seed: #F07F2F;
+      --seriesA: #9B4D09;
+      --seriesB: #001F73;
+      --growth: #00B425;
+      --ipo: #3E5DDA;
+      --curve: #8A69BD;
+    }
+
+    svg { background: transparent; }
+    text { font-family: Inter, Arial, sans-serif; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeUp .55s ease forwards;
+    }
+
+    .frame {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.25;
+      filter: drop-shadow(0 6px 18px var(--shadow));
+      opacity: 0;
+      animation: fadeIn .45s ease forwards;
+    }
+
+    .axis, .growth-line {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: var(--len);
+      stroke-dashoffset: var(--len);
+      animation: draw 1.0s ease forwards;
+    }
+
+    .axis {
+      stroke: #676767;
+      stroke-width: 2.15;
+      animation-delay: .2s;
+    }
+
+    .growth-line {
+      stroke: #8B857F;
+      stroke-width: 2.15;
+      animation-delay: .7s;
+    }
+
+    .curve {
+      fill: none;
+      stroke: var(--curve);
+      stroke-width: 2.25;
+      stroke-dasharray: 6 6;
+      stroke-linecap: round;
+      stroke-dashoffset: 120;
+      opacity: 0;
+      animation: curveIn 1.2s ease forwards;
+      animation-delay: 1.75s;
+    }
+
+    .node {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: scale(.68);
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,.14));
+      animation: pop .42s cubic-bezier(.2,.85,.25,1.15) forwards;
+    }
+
+    .label, .legend-item, .futurecount-copy { opacity: 0; animation: fadeIn .45s ease forwards; }
+    .title-text, .subtitle-text { opacity: 0; animation: fadeUp .55s ease forwards; }
+
+    #node-seed { animation-delay: 1.05s; }
+    #node-seriesA { animation-delay: 1.2s; }
+    #node-seriesB { animation-delay: 1.35s; }
+    #node-growth { animation-delay: 1.5s; }
+    #node-ipo { animation-delay: 1.65s; }
+
+    #yLabel { animation-delay: .95s; }
+    #xLabel { animation-delay: 1.05s; }
+    #futurecount-title { animation-delay: 2.15s; }
+    #futurecount-body { animation-delay: 2.28s; }
+
+    #legend-1 { animation-delay: 1.85s; }
+    #legend-2 { animation-delay: 1.97s; }
+    #legend-3 { animation-delay: 2.09s; }
+    #legend-4 { animation-delay: 2.21s; }
+    #legend-5 { animation-delay: 2.33s; }
+
+    #main-title { animation-delay: 0s; }
+    #main-subtitle { animation-delay: .12s; }
+
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes pop { to { opacity: 1; transform: scale(1); } }
+    @keyframes curveIn {
+      0% { opacity: 0; stroke-dashoffset: 120; }
+      25% { opacity: 1; }
+      100% { opacity: 1; stroke-dashoffset: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; }
+    }
+  </style>
+
+  <g id="title-group">
+    <text id="main-title" class="title-text" x="73" y="56" font-size="26" font-weight="800" fill="#000">Partnership Ecosystems are Essential</text>
+    <text id="main-subtitle" class="subtitle-text" x="73" y="81" font-size="17" font-weight="500" fill="#111">Early-Stage Companies Lack Internal Expertise and Bandwidth</text>
+  </g>
+
+  <g id="chart-frame">
+    <rect class="frame" x="41" y="118" width="642" height="388" rx="0.5"/>
+  </g>
+
+  <g id="axes">
+    <path class="axis" style="--len: 560" d="M100 445H639"/>
+    <polygon class="fade-up" points="639,445 633,441 633,449" fill="#676767" style="animation-delay:1.15s"/>
+    <path class="axis" style="--len: 290" d="M100 445V158"/>
+    <polygon class="fade-up" points="100,158 96,164 104,164" fill="#676767" style="animation-delay:.72s"/>
+  </g>
+
+  <g id="growth-line-group">
+    <path class="growth-line" style="--len: 520" d="M119 428L540 214"/>
+    <polygon class="fade-up" points="540,214 532,214 536,221" fill="#8B857F" style="animation-delay:1.28s"/>
+  </g>
+
+  <g id="futurecount-curve">
+    <path class="curve" d="M98 287C171 285 248 289 305 314C364 341 405 387 418 445"/>
+  </g>
+
+  <g id="nodes">
+    <circle id="node-seed" class="node" cx="119" cy="430" r="13" fill="var(--seed)"/>
+    <circle id="node-seriesA" class="node" cx="226" cy="379" r="13" fill="var(--seriesA)"/>
+    <circle id="node-seriesB" class="node" cx="337" cy="319" r="13" fill="var(--seriesB)"/>
+    <circle id="node-growth" class="node" cx="432" cy="267" r="13" fill="var(--growth)"/>
+    <circle id="node-ipo" class="node" cx="553" cy="203" r="13" fill="var(--ipo)"/>
+  </g>
+
+  <g id="labels">
+    <text id="yLabel" class="label" x="87" y="423" font-size="18" font-weight="500" fill="#000" transform="rotate(-90 87 423)">Organizational Size &amp; Complexity</text>
+    <text id="xLabel" class="label" x="239" y="483" font-size="18" font-weight="500" fill="#000">Company Growth &amp; Profitability</text>
+  </g>
+
+  <g id="futurecount-copy">
+    <text id="futurecount-title" x="111" y="325" font-size="19" font-weight="800" letter-spacing="0.5" fill="#8D8A85">FUTURECOUNT</text>
+    <text id="futurecount-body" x="111" y="346" font-size="13.5" font-weight="500" fill="#111">Fractional Expertise &amp;</text>
+    <text id="futurecount-body-2" class="futurecount-copy" x="111" y="364" font-size="13.5" font-weight="500" fill="#111" style="animation-delay:2.36s">Operational Partner</text>
+  </g>
+
+  <g id="legend">
+    <text id="legend-1" class="legend-item" x="439" y="311" font-size="13.5" font-weight="700" fill="var(--seed)">Seed Stage — Founder-Led Startup</text>
+    <text id="legend-2" class="legend-item" x="439" y="341" font-size="13.5" font-weight="700" fill="var(--seriesA)">Series A — Product-Market Fit Startup</text>
+    <text id="legend-3" class="legend-item" x="439" y="371" font-size="13.5" font-weight="700" fill="var(--seriesB)">Series B — Scaling Startup</text>
+    <text id="legend-4" class="legend-item" x="439" y="401" font-size="13.5" font-weight="700" fill="var(--growth)">Growth Equity — Growth Company</text>
+    <text id="legend-5" class="legend-item" x="439" y="431" font-size="13.5" font-weight="700" fill="var(--ipo)">PE / IPO — Mature Enterprise</text>
+  </g>
+</svg>
