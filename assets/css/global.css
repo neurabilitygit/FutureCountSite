@@ -34,6 +34,7 @@ h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;line-height:1.08;letter-spacing
 @media (max-width:720px){.growth-visual{padding:1.1rem 0 1.75rem}.growth-visual .container{padding-top:.9rem}.growth-visual .container::before{margin-bottom:.95rem}.growth-chart{padding:.4rem;border-radius:14px}}
 
 
+
 .section-label,
 .eyebrow {
     font-size: 1.4rem;
@@ -106,4 +107,29 @@ h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;line-height:1.08;letter-spacing
     padding:0 1.15rem 1.15rem 1.15rem;
     color:var(--charcoal-2);
 }
+
+.booking-embed-card{
+    padding:1rem;
+    border:1px solid rgba(47,41,37,.12);
+    border-radius:24px;
+    background:rgba(255,255,255,.72);
+    box-shadow:var(--shadow);
+}
+.booking-embed-card iframe{
+    display:block;
+    width:100%;
+    min-height:760px;
+    border:none;
+    border-radius:16px;
+    background:#fff;
+}
+@media (max-width: 680px){
+    .booking-embed-card{
+        padding:.5rem;
+    }
+    .booking-embed-card iframe{
+        min-height:680px;
+    }
+}
+
 
