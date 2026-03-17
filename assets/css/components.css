@@ -1,1 +1,86 @@
-.accent-word{color:var(--rust)}.kicker-line{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}.kicker-line:before{content:"";width:44px;height:1px;background:rgba(178,74,46,.28)}.section-label{font-size:.9rem;font-weight:700;color:var(--rust);letter-spacing:.08em;text-transform:uppercase}
+.accent-word{color:var(--rust)}.kicker-line{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}.kicker-line:before{content:"";width:44px;height:1px;background:rgba(178,74,46,.28)}.section-label {font-size: 1.4rem;font-weight:700;color:var(--rust);letter-spacing:.08em;text-transform:uppercase}
+
+
+
+
+
+@keyframes cardBuild {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-grid > .card,
+.feature-grid > .card,
+.gain-grid > .card,
+.audience-grid > .card {
+    opacity: 0;
+    animation: cardBuild 0.94s ease forwards;
+    will-change: transform, opacity;
+}
+
+.service-grid > .card:nth-child(1),
+.feature-grid > .card:nth-child(1),
+.gain-grid > .card:nth-child(1),
+.audience-grid > .card:nth-child(1) {
+    animation-delay: 0.19s;
+}
+
+.service-grid > .card:nth-child(2),
+.feature-grid > .card:nth-child(2),
+.gain-grid > .card:nth-child(2),
+.audience-grid > .card:nth-child(2) {
+    animation-delay: 0.44s;
+}
+
+.service-grid > .card:nth-child(3),
+.feature-grid > .card:nth-child(3),
+.gain-grid > .card:nth-child(3),
+.audience-grid > .card:nth-child(3) {
+    animation-delay: 0.69s;
+}
+
+.service-grid > .card:nth-child(4),
+.feature-grid > .card:nth-child(4),
+.gain-grid > .card:nth-child(4),
+.audience-grid > .card:nth-child(4) {
+    animation-delay: 0.94s;
+}
+
+
+
+
+
+
+/* Operating model service-grid animation: scroll-triggered, animate once */
+.service-grid.js-animate-on-scroll > .card {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+}
+
+.service-grid.js-animate-on-scroll.in-view > .card:nth-child(1) {
+    animation: cardBuild 0.94s ease forwards;
+    animation-delay: 0.24s;
+}
+
+.service-grid.js-animate-on-scroll.in-view > .card:nth-child(2) {
+    animation: cardBuild 0.94s ease forwards;
+    animation-delay: 0.55s;
+}
+
+.service-grid.js-animate-on-scroll.in-view > .card:nth-child(3) {
+    animation: cardBuild 0.94s ease forwards;
+    animation-delay: 0.86s;
+}
+
+.service-grid.js-animate-on-scroll.in-view > .card:nth-child(4) {
+    animation: cardBuild 0.94s ease forwards;
+    animation-delay: 1.18s;
+}
+

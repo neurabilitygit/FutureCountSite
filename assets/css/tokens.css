@@ -13,9 +13,9 @@
 --max:1180px;
 --text:clamp(1rem,.95rem + .18vw,1.125rem);
 --small:.94rem;
---h1:clamp(3.2rem,5vw,5.6rem);
---h2:clamp(2rem,3vw,3.2rem);
---h3:clamp(1.25rem,1.1rem + .8vw,1.6rem);
+--h1:clamp(2.56rem,4vw,4.48rem);
+--h2:clamp(1.6rem,2.4vw,2.56rem);
+--h3:clamp(1rem,.88rem + .64vw,1.28rem);
 --radius:24px;
 --radius-sm:14px;
 --shadow:0 18px 50px rgba(38,30,22,.08);
