@@ -57,6 +57,7 @@ function initConsentManager() {
     openPreferences: openPreferences,
     reset: resetConsent
   };
+  window.openCookiePreferences = openPreferences;
 
   buildConsentUi();
   applyConsent(activeConsent);
@@ -70,6 +71,13 @@ function initConsentManager() {
       event.preventDefault();
       openPreferences();
     });
+  });
+
+  document.addEventListener('click', function (event) {
+    const trigger = event.target.closest('[data-cookie-preferences]');
+    if (!trigger) return;
+    event.preventDefault();
+    openPreferences();
   });
 
   function readConsent() {
