@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FutureCount fc monogram logo">
+  <style>
+    .glyph { fill: #ffffff; }
+    .f-shape { animation: slideF 2.7s cubic-bezier(0.16,1,0.30,1) forwards; transform-box: fill-box; transform-origin: center;}
+    .c-shape { animation: slideC 2.7s cubic-bezier(0.16,1,0.30,1) forwards; transform-box: fill-box; transform-origin: center;}
+    @keyframes slideF { from { transform: translateX(-150px);} to { transform: translateX(0);} }
+    @keyframes slideC { from { transform: translateX(150px);} to { transform: translateX(0);} }
+  </style>
+  <g class="glyph f-shape">
+    <path d="M184 138C184 103 212 80 252 80H314V119H257C240 119 231 129 231 146V184H304V223H231V383H182V223H140V184H182V146C182 143 183 141 184 138Z"/>
+  </g>
+  <g class="glyph c-shape">
+    <path d="M337 178C379 178 405 188 430 201V240C401 223 381 217 359 217C323 217 297 240 297 281C297 323 323 346 359 346C381 346 401 340 430 322V361C405 374 378 385 337 385C276 385 245 340 245 281C245 222 276 178 337 178Z"/>
+  </g>
+</svg>
