@@ -27,22 +27,22 @@
     :root{
       --ink:#102033;
       --muted:#5f6d7d;
-      --soft:#f6f3ed;
-      --cream:#fffdf8;
-      --line:#e4ded2;
+      --soft:#dfe7e5;
+      --cream:#f3f6f3;
+      --line:rgba(89,109,119,.24);
       --gold:#c59a4a;
       --navy:#0b2742;
       --green:#456653;
       --rs:#df7b3f;
-      --panel:#ffffff;
-      --shadow:0 20px 55px rgba(20,34,52,.10);
+      --panel:rgba(250,252,250,.94);
+      --shadow:0 24px 60px rgba(8,25,39,.12);
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{
       font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       background:
-        linear-gradient(90deg, rgba(11,39,66,.04) 1px, transparent 1px),
-        linear-gradient(180deg, var(--cream), var(--soft));
+        linear-gradient(90deg, rgba(11,39,66,.045) 1px, transparent 1px),
+        linear-gradient(180deg, #edf2ef 0%, var(--cream) 38%, var(--soft) 100%);
       background-size:92px 92px, auto;
       color:var(--ink);
       line-height:1.55;
@@ -53,7 +53,7 @@
     a{color:inherit;text-decoration:none;}
     .wrap{width:min(980px, calc(100% - 40px));margin:0 auto;}
     header{
-      background:rgba(255,253,248,.88);
+      background:rgba(244,247,244,.88);
       backdrop-filter:blur(14px);
       border-bottom:1px solid var(--line);
     }
@@ -85,14 +85,15 @@
       padding:9px 11px;
       border-radius:999px;
     }
-    nav a:hover{background:#efe8db;color:var(--ink);}
+    nav a:hover{background:rgba(69,102,83,.1);color:var(--ink);}
     main{flex:1;padding:74px 0;}
     .panel{
-      background:rgba(255,255,255,.82);
+      background:rgba(250,252,250,.9);
       border:1px solid var(--line);
       border-radius:24px;
       padding:34px;
       box-shadow:var(--shadow);
+      backdrop-filter:blur(12px);
     }
     .eyebrow{
       color:var(--green);
@@ -113,34 +114,55 @@
       color:#4f5f72;
       font-size:19px;
       max-width:720px;
-      margin-bottom:26px;
+      margin-bottom:24px;
     }
-    .cta-grid{
+    .choice-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:16px;
       margin-top:24px;
     }
-    .card{
-      background:white;
+    .choice-card{
+      background:var(--panel);
       border:1px solid var(--line);
       border-radius:18px;
-      padding:20px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:18px;
+      min-height:225px;
     }
-    .card img{
-      width:150px;
-      height:auto;
+    .choice-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
       margin-bottom:12px;
     }
-    .card h2{
+    .choice-brand img{
+      width:78px;
+      height:auto;
+      object-fit:contain;
+      flex:0 0 auto;
+    }
+    .choice-brand h2{
       color:var(--navy);
       font-size:19px;
-      margin-bottom:8px;
+      margin:0;
     }
-    .card p{
+    .choice-card p{
       color:var(--muted);
       font-size:14px;
-      margin-bottom:16px;
+      margin:0;
+    }
+    .choice-kicker{
+      display:block;
+      color:var(--green);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-top:3px;
     }
     .button{
       display:inline-flex;
@@ -173,7 +195,7 @@
     @media (max-width:760px){
       .header-inner{align-items:flex-start;flex-direction:column;padding:14px 0;}
       .panel{padding:24px;}
-      .cta-grid{grid-template-columns:1fr;}
+      .choice-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -185,7 +207,7 @@
         <strong>FutureCount Holdings LLC</strong>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="index.html#businesses">Businesses</a>
+        <a href="index.html#businesses">Portfolio</a>
         <a href="https://risingsenior.com">Rising Senior</a>
         <a href="index.html">Home</a>
       </nav>
@@ -198,32 +220,43 @@
         <div class="eyebrow">Contact</div>
         <h1>Start with the right conversation.</h1>
         <p class="lead">
-          For Rising Senior, visit the product site. For FutureCount advisory work or company-level questions,
-          book a short introductory conversation with Eric.
+          If you are exploring Rising Senior, start with the product site. If you want to discuss FutureCount
+          advisory work or a company-level question, book a short introductory call with Eric.
         </p>
 
-        <div class="cta-grid">
-          <article class="card">
-            <img src="assets/logos/rising-senior-logo.png" alt="Rising Senior" />
-            <h2>Rising Senior</h2>
-            <p>
-              Learn about the family-centric SaaS and coaching platform for the college-to-career transition.
-            </p>
+        <div class="choice-grid">
+          <article class="choice-card">
+            <div>
+              <div class="choice-brand">
+                <img src="assets/logos/rising-senior-logo.png" alt="" />
+                <div>
+                  <h2>Rising Senior</h2>
+                  <span class="choice-kicker">College-to-career platform</span>
+                </div>
+              </div>
+              <p>
+                Learn about the family-centric SaaS and coaching platform for college students, parents, and coaches.
+              </p>
+            </div>
             <a class="button rising" href="https://risingsenior.com">Visit Rising Senior</a>
           </article>
 
-          <article class="card">
-            <h2>FutureCount Holdings LLC</h2>
-            <p>
-              Book a 30-minute introductory call for advisory work, company-level questions, or business-line inquiries.
-            </p>
+          <article class="choice-card">
+            <div>
+              <div class="choice-brand">
+                <img src="assets/img/futurecount-logo-header-footer.png" alt="" />
+                <div>
+                  <h2>FutureCount</h2>
+                  <span class="choice-kicker">Advisory and company matters</span>
+                </div>
+              </div>
+              <p>
+                Use this path for selected advisory work, partnership questions, or FutureCount Holdings inquiries.
+              </p>
+            </div>
             <a class="button primary" href="https://app.simplymeet.me/futurecountllc">Book a 30-minute introductory call</a>
           </article>
         </div>
-
-        <p class="note">
-          Rising Senior is a product and service operated by FutureCount Holdings LLC.
-        </p>
       </section>
     </div>
   </main>
