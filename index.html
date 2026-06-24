@@ -243,41 +243,46 @@
       background:var(--panel);
       border:1px solid var(--line);
       border-radius:18px;
-      padding:18px;
+      padding:16px;
       box-shadow:var(--shadow);
       backdrop-filter:blur(10px);
       min-height:0;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-      gap:12px;
+      gap:10px;
     }
     .business.featured{
       border-color:rgba(88,128,137,.36);
       background:linear-gradient(135deg, rgba(255,255,255,.96) 0%, rgba(236,243,241,.95) 100%);
-      padding:22px;
+      padding:18px;
     }
-    .logo-row{
+    .business-brand{
       display:flex;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
+      gap:14px;
+      margin-bottom:12px;
+    }
+    .business-brand-copy{
+      min-width:0;
+      display:flex;
       flex-direction:column;
-      gap:8px;
-      margin-bottom:10px;
-      text-align:center;
+      align-items:flex-start;
+      gap:5px;
     }
     .rising-logo{
-      width:min(180px, 72%);
+      width:90px;
       height:auto;
       display:block;
-      margin:0 auto;
+      flex:0 0 auto;
     }
     .small-mark{
-      width:min(180px, 72%);
+      width:90px;
       height:auto;
       object-fit:contain;
       opacity:.7;
-      margin:0 auto;
+      flex:0 0 auto;
     }
     .tag{
       display:inline-flex;
@@ -293,22 +298,21 @@
     .business h3{
       font-size:22px;
       color:var(--navy);
-      margin-bottom:6px;
+      margin:0;
       letter-spacing:-.02em;
-      text-align:center;
     }
     .business p{
       color:#4e5d70;
       font-size:14px;
-      margin-bottom:12px;
+      margin-bottom:10px;
     }
     .business ul{
       list-style:none;
       display:grid;
-      gap:6px;
+      gap:5px;
       color:#566477;
       font-size:13px;
-      margin-bottom:12px;
+      margin-bottom:10px;
     }
     .business li{
       padding-left:14px;
@@ -400,7 +404,7 @@
       .hero-copy{padding-top:44px;max-width:100%;}
       .business{min-height:auto;}
       .section-heading,.contact-band{align-items:flex-start;flex-direction:column;}
-      .rising-logo,.small-mark{width:150px;}
+      .rising-logo,.small-mark{width:78px;}
     }
     @media (max-width:520px){
       .wrap{width:min(100% - 28px, 1120px);}
@@ -454,11 +458,13 @@
         <div class="business-grid">
           <article class="business featured">
             <div>
-              <div class="logo-row">
+              <div class="business-brand">
                 <img class="rising-logo" src="assets/logos/rising-senior-logo.png" alt="Rising Senior" />
-                <span class="tag">Featured venture</span>
+                <div class="business-brand-copy">
+                  <h3>Rising Senior</h3>
+                  <span class="tag">Featured venture</span>
+                </div>
               </div>
-              <h3>Rising Senior</h3>
               <p>
                 A family-centric SaaS and coaching platform helping college students, parents, and coaches turn college
                 activity into a clearer path toward employability, independence, and life after graduation.
@@ -477,11 +483,13 @@
 
           <article class="business">
             <div>
-              <div class="logo-row">
+              <div class="business-brand">
                 <img class="small-mark" src="assets/img/futurecount-logo-header-footer.png" alt="FutureCount" />
-                <span class="tag">Professional services</span>
+                <div class="business-brand-copy">
+                  <h3>FutureCount</h3>
+                  <span class="tag">Professional services</span>
+                </div>
               </div>
-              <h3>FutureCount</h3>
               <p>
                 Advisory work for technology-driven growth, partner ecosystems, operating models, and professional-services strategy.
               </p>
