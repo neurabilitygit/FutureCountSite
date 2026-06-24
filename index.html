@@ -15,11 +15,13 @@
   <title>FutureCount Holdings LLC | Operating FutureCount and Rising Senior</title>
   <link rel="canonical" href="https://futurecountllc.com/" />
   <meta name="description" content="FutureCount Holdings LLC operates FutureCount professional services and Rising Senior, a family-centric SaaS and coaching platform for the college-to-career transition." />
+  <link rel="icon" href="assets/img/futurecount-icon-charcoal.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/futurecount-icon-charcoal.png" />
   <meta property="og:title" content="FutureCount Holdings LLC" />
   <meta property="og:description" content="The operating company behind FutureCount professional services and Rising Senior." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://futurecountllc.com/" />
-  <meta property="og:image" content="https://futurecountllc.com/assets/logos/rising-senior-logo.png" />
+  <meta property="og:image" content="https://futurecountllc.com/assets/img/rising-senior-operating-path.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,7 +119,12 @@
 
     main{padding-bottom:64px;}
     .hero{
-      padding:88px 0 54px;
+      padding:78px 0 46px;
+      background:
+        radial-gradient(circle at 82% 14%, rgba(223,123,63,.16), transparent 26%),
+        linear-gradient(135deg, #071521 0%, #0b2742 52%, #071521 100%);
+      color:white;
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
     .eyebrow{
       display:inline-flex;
@@ -127,7 +134,7 @@
       font-weight:800;
       text-transform:uppercase;
       letter-spacing:.12em;
-      color:var(--green);
+      color:#d8c7a7;
       margin-bottom:18px;
     }
     .eyebrow::before{
@@ -138,21 +145,45 @@
     }
     .hero-grid{
       display:block;
-      max-width:760px;
+      max-width:1160px;
     }
     h1{
-      font-size:clamp(22px, 3vw, 32px);
-      line-height:1.12;
-      letter-spacing:-.02em;
-      color:var(--navy);
-      max-width:720px;
+      font-size:clamp(34px, 6vw, 76px);
+      line-height:.98;
+      letter-spacing:-.04em;
+      color:white;
+      max-width:980px;
       margin-bottom:16px;
     }
     .lead{
-      font-size:20px;
-      color:#48596b;
-      max-width:780px;
-      margin-bottom:26px;
+      font-size:clamp(17px, 2vw, 22px);
+      color:#d6e0ea;
+      max-width:850px;
+      margin-bottom:24px;
+    }
+    .hero-copy{
+      max-width:980px;
+      position:relative;
+      z-index:1;
+    }
+    .hero-visual{
+      margin-top:36px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:26px;
+      overflow:hidden;
+      background:#071521;
+      box-shadow:0 34px 90px rgba(0,0,0,.38);
+    }
+    .hero-visual img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+    .hero .button{
+      border-color:rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      color:white;
+      box-shadow:none;
     }
     .cta-row{
       display:flex;
@@ -184,6 +215,54 @@
       color:white;
       border-color:var(--rs);
     }
+    .thesis-panel{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);
+      gap:24px;
+      align-items:start;
+    }
+    .thesis-panel h2{
+      font-size:30px;
+      color:var(--navy);
+      letter-spacing:-.03em;
+      margin-bottom:12px;
+    }
+    .thesis-panel p{
+      color:#4e5d70;
+      font-size:17px;
+      max-width:720px;
+    }
+    .year-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+    }
+    .year-card{
+      background:#fffaf0;
+      border:1px solid #eadbc0;
+      border-radius:14px;
+      padding:12px;
+      min-height:104px;
+    }
+    .year-card strong{
+      display:block;
+      color:var(--navy);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .year-card span{
+      display:block;
+      color:#526173;
+      font-size:13px;
+      line-height:1.35;
+    }
     .section{
       padding:42px 0;
     }
@@ -206,14 +285,15 @@
     }
     .business-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
+      grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);
+      gap:16px;
+      align-items:stretch;
     }
     .business{
       background:var(--panel);
       border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px;
+      border-radius:18px;
+      padding:18px;
       box-shadow:var(--shadow);
       min-height:0;
       display:flex;
@@ -224,6 +304,7 @@
     .business.featured{
       border-color:rgba(223,123,63,.42);
       background:linear-gradient(135deg, #ffffff 0%, #fff7ef 100%);
+      padding:22px;
     }
     .logo-row{
       display:flex;
@@ -235,7 +316,7 @@
       text-align:center;
     }
     .rising-logo{
-      width:min(132px, 64%);
+      width:min(180px, 72%);
       height:auto;
       display:block;
       margin:0 auto;
@@ -260,7 +341,7 @@
       white-space:nowrap;
     }
     .business h3{
-      font-size:18px;
+      font-size:22px;
       color:var(--navy);
       margin-bottom:6px;
       letter-spacing:-.02em;
@@ -268,16 +349,16 @@
     }
     .business p{
       color:#4e5d70;
-      font-size:13px;
-      margin-bottom:10px;
+      font-size:14px;
+      margin-bottom:12px;
     }
     .business ul{
       list-style:none;
       display:grid;
       gap:6px;
       color:#566477;
-      font-size:12px;
-      margin-bottom:10px;
+      font-size:13px;
+      margin-bottom:12px;
     }
     .business li{
       padding-left:14px;
@@ -374,11 +455,18 @@
     @media (max-width:860px){
       .header-inner{align-items:flex-start;flex-direction:column;padding:14px 0;}
       nav{justify-content:flex-start;}
-      .hero{padding-top:58px;}
-      .hero-grid,.business-grid,.about-panel{grid-template-columns:1fr;}
+      .hero{padding-top:54px;}
+      .hero-grid,.business-grid,.about-panel,.thesis-panel{grid-template-columns:1fr;}
+      h1{font-size:clamp(36px, 13vw, 54px);}
+      .hero-visual{border-radius:18px;margin-top:26px;}
       .business{min-height:auto;}
       .section-heading,.contact-band{align-items:flex-start;flex-direction:column;}
-      .rising-logo{width:132px;}
+      .rising-logo{width:150px;}
+      .year-strip{grid-template-columns:1fr 1fr;}
+    }
+    @media (max-width:520px){
+      .wrap{width:min(100% - 28px, 1120px);}
+      .year-strip{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -404,12 +492,12 @@
   <main>
     <section class="hero">
       <div class="wrap hero-grid">
-        <div>
+        <div class="hero-copy">
           <div class="eyebrow">Massachusetts LLC</div>
-          <h1>FutureCount Holdings LLC operates focused service and software businesses.</h1>
+          <h1>Building focused software and service businesses.</h1>
           <p class="lead">
-            FutureCount Holdings LLC is the operating company behind FutureCount professional services and Rising Senior,
-            a family-centric SaaS and coaching platform for the college-to-career transition.
+            FutureCount Holdings LLC operates Rising Senior, a family-centric SaaS and coaching platform for the
+            college-to-career transition, along with selected FutureCount advisory work.
           </p>
           <div class="cta-row">
             <a class="button rising" href="https://risingsenior.com">Visit Rising Senior</a>
@@ -417,7 +505,42 @@
             <a class="button" href="contact.html">Book an introductory call</a>
           </div>
         </div>
+        <figure class="hero-visual" aria-label="A structured path from college toward professional life">
+          <img src="assets/img/rising-senior-operating-path.png" alt="" />
+        </figure>
+      </div>
+    </section>
 
+    <section class="section" id="thesis">
+      <div class="wrap">
+        <div class="thesis-panel">
+          <div>
+            <h2>Why Rising Senior exists</h2>
+            <p>
+              As a parent, I know college is no longer a simple path from degree to job. Rising Senior helps families
+              see whether each semester is building real direction, useful evidence, and the support a student needs
+              for a changing labor market.
+            </p>
+          </div>
+          <div class="year-strip" aria-label="Four-year college-to-career progression">
+            <div class="year-card">
+              <strong>Year 1</strong>
+              <span>Orientation, academic record, and early direction.</span>
+            </div>
+            <div class="year-card">
+              <strong>Year 2</strong>
+              <span>Coursework, habits, and first evidence of fit.</span>
+            </div>
+            <div class="year-card">
+              <strong>Year 3</strong>
+              <span>Projects, network, coaching, and role clarity.</span>
+            </div>
+            <div class="year-card">
+              <strong>Year 4</strong>
+              <span>Launch plan, applications, decisions, and support.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -425,6 +548,9 @@
       <div class="wrap">
         <div class="section-heading">
           <h2>Operating lines</h2>
+          <p>
+            Rising Senior is the active product venture. FutureCount advisory remains selective and distinct.
+          </p>
         </div>
 
         <div class="business-grid">
@@ -436,12 +562,12 @@
               </div>
               <h3>Rising Senior</h3>
               <p>
-                A family-centric SaaS and coaching platform helping college students, parents, and coaches turn college activity
-                into a clearer path toward employability, independence, and life after graduation.
+                A family-centric SaaS and coaching platform helping college students, parents, and coaches turn college
+                activity into a clearer path toward employability, independence, and life after graduation.
               </p>
               <ul>
-                <li>Student progress, academic records, important dates, and career goals in one place</li>
-                <li>Coach-in-the-loop guidance that helps families understand what is changing over time</li>
+                <li>Student progress, academic records, important dates, and career goals in one operating record</li>
+                <li>Coach-in-the-loop guidance across the college-to-career transition</li>
                 <li>Family Compass support for clearer parent-student communication</li>
               </ul>
             </div>
