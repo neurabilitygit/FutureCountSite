@@ -119,15 +119,23 @@
 
     main{padding-bottom:64px;}
     .hero{
-      padding:78px 0 46px;
+      min-height:calc(100svh - 72px);
+      padding:0;
       background:
-        radial-gradient(circle at 82% 14%, rgba(223,123,63,.16), transparent 26%),
-        linear-gradient(135deg, #071521 0%, #0b2742 52%, #071521 100%);
+        linear-gradient(90deg, rgba(4,13,24,.94) 0%, rgba(4,13,24,.82) 31%, rgba(4,13,24,.38) 62%, rgba(4,13,24,.14) 100%),
+        linear-gradient(180deg, rgba(4,13,24,.30) 0%, rgba(4,13,24,.08) 42%, rgba(4,13,24,.58) 100%),
+        url("assets/img/rising-senior-operating-path.png");
+      background-size:cover;
+      background-position:center;
       color:white;
       border-bottom:1px solid rgba(255,255,255,.08);
+      position:relative;
+      overflow:hidden;
     }
     .hero-grid{
-      display:block;
+      min-height:calc(100svh - 72px);
+      display:flex;
+      align-items:flex-start;
       max-width:1160px;
     }
     h1{
@@ -145,22 +153,10 @@
       margin-bottom:24px;
     }
     .hero-copy{
-      max-width:980px;
+      max-width:820px;
+      padding-top:clamp(70px, 10vh, 118px);
       position:relative;
       z-index:1;
-    }
-    .hero-visual{
-      margin-top:36px;
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:26px;
-      overflow:hidden;
-      background:#071521;
-      box-shadow:0 34px 90px rgba(0,0,0,.38);
-    }
-    .hero-visual img{
-      display:block;
-      width:100%;
-      height:auto;
     }
     .hero .button{
       border-color:rgba(255,255,255,.18);
@@ -437,10 +433,20 @@
     @media (max-width:860px){
       .header-inner{align-items:flex-start;flex-direction:column;padding:14px 0;}
       nav{justify-content:flex-start;}
-      .hero{padding-top:54px;}
+      .hero{
+        min-height:calc(100svh - 124px);
+        background:
+          linear-gradient(180deg, rgba(4,13,24,.92) 0%, rgba(4,13,24,.72) 44%, rgba(4,13,24,.48) 100%),
+          url("assets/img/rising-senior-operating-path.png");
+        background-size:cover;
+        background-position:58% center;
+      }
+      .hero-grid{
+        min-height:calc(100svh - 124px);
+      }
       .hero-grid,.business-grid,.about-panel,.thesis-panel{grid-template-columns:1fr;}
       h1{font-size:clamp(36px, 13vw, 54px);}
-      .hero-visual{border-radius:18px;margin-top:26px;}
+      .hero-copy{padding-top:44px;max-width:100%;}
       .business{min-height:auto;}
       .section-heading,.contact-band{align-items:flex-start;flex-direction:column;}
       .rising-logo{width:150px;}
@@ -482,13 +488,9 @@
           </p>
           <div class="cta-row">
             <a class="button rising" href="https://risingsenior.com">Visit Rising Senior</a>
-            <a class="button" href="#businesses">View business lines</a>
             <a class="button" href="contact.html">Book an introductory call</a>
           </div>
         </div>
-        <figure class="hero-visual" aria-label="A structured path from college toward professional life">
-          <img src="assets/img/rising-senior-operating-path.png" alt="" />
-        </figure>
       </div>
     </section>
 
