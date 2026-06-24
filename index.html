@@ -137,18 +137,16 @@
       background:var(--gold);
     }
     .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) 360px;
-      gap:42px;
-      align-items:start;
+      display:block;
+      max-width:760px;
     }
     h1{
-      font-size:clamp(40px, 6vw, 68px);
-      line-height:1.02;
-      letter-spacing:-.03em;
+      font-size:clamp(22px, 3vw, 32px);
+      line-height:1.12;
+      letter-spacing:-.02em;
       color:var(--navy);
-      max-width:920px;
-      margin-bottom:20px;
+      max-width:720px;
+      margin-bottom:16px;
     }
     .lead{
       font-size:20px;
@@ -186,28 +184,6 @@
       color:white;
       border-color:var(--rs);
     }
-    .aside-card{
-      background:rgba(255,255,255,.78);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-      box-shadow:var(--shadow);
-    }
-    .aside-card h2{
-      font-size:16px;
-      color:var(--navy);
-      margin-bottom:10px;
-    }
-    .aside-card p{
-      color:var(--muted);
-      font-size:14px;
-      margin-bottom:14px;
-    }
-    .fine{
-      color:#738091;
-      font-size:12px;
-    }
-
     .section{
       padding:42px 0;
     }
@@ -216,7 +192,7 @@
       align-items:end;
       justify-content:space-between;
       gap:24px;
-      margin-bottom:18px;
+      margin-bottom:14px;
     }
     .section-heading h2{
       font-size:28px;
@@ -230,20 +206,20 @@
     }
     .business-grid{
       display:grid;
-      grid-template-columns:1.25fr .75fr;
-      gap:18px;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
     }
     .business{
       background:var(--panel);
       border:1px solid var(--line);
-      border-radius:20px;
-      padding:24px;
+      border-radius:16px;
+      padding:14px;
       box-shadow:var(--shadow);
-      min-height:280px;
+      min-height:0;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-      gap:24px;
+      gap:12px;
     }
     .business.featured{
       border-color:rgba(223,123,63,.42);
@@ -252,54 +228,59 @@
     .logo-row{
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      margin-bottom:14px;
+      justify-content:center;
+      flex-direction:column;
+      gap:8px;
+      margin-bottom:10px;
+      text-align:center;
     }
     .rising-logo{
-      width:min(230px, 70%);
+      width:min(132px, 64%);
       height:auto;
       display:block;
+      margin:0 auto;
     }
     .small-mark{
-      width:42px;
-      height:42px;
+      width:30px;
+      height:30px;
       object-fit:contain;
-      border-radius:10px;
+      border-radius:8px;
       opacity:.7;
+      margin:0 auto;
     }
     .tag{
       display:inline-flex;
       align-items:center;
-      padding:6px 10px;
+      padding:5px 8px;
       border-radius:999px;
       background:#f2eadc;
       color:var(--green);
-      font-size:12px;
+      font-size:10px;
       font-weight:800;
       white-space:nowrap;
     }
     .business h3{
-      font-size:24px;
+      font-size:18px;
       color:var(--navy);
-      margin-bottom:10px;
+      margin-bottom:6px;
       letter-spacing:-.02em;
+      text-align:center;
     }
     .business p{
       color:#4e5d70;
-      font-size:16px;
-      margin-bottom:16px;
+      font-size:13px;
+      margin-bottom:10px;
     }
     .business ul{
       list-style:none;
       display:grid;
-      gap:9px;
+      gap:6px;
       color:#566477;
-      font-size:14px;
-      margin-bottom:20px;
+      font-size:12px;
+      margin-bottom:10px;
     }
     .business li{
-      padding-left:18px;
+      padding-left:14px;
       position:relative;
     }
     .business li::before{
@@ -311,6 +292,17 @@
       height:7px;
       border-radius:999px;
       background:var(--gold);
+    }
+    .business .cta-row{
+      gap:8px;
+      justify-content:center;
+    }
+    .business .button{
+      min-height:36px;
+      padding:8px 11px;
+      border-radius:10px;
+      font-size:12px;
+      box-shadow:0 6px 16px rgba(20,34,52,.06);
     }
 
     .about-panel{
@@ -386,7 +378,7 @@
       .hero-grid,.business-grid,.about-panel{grid-template-columns:1fr;}
       .business{min-height:auto;}
       .section-heading,.contact-band{align-items:flex-start;flex-direction:column;}
-      .rising-logo{width:210px;}
+      .rising-logo{width:132px;}
     }
   </style>
 </head>
@@ -426,15 +418,6 @@
           </div>
         </div>
 
-        <aside class="aside-card" aria-label="Company note">
-          <h2>One operating company. Two clear lines of business.</h2>
-          <p>
-            FutureCount Holdings LLC owns and operates Rising Senior while continuing to support selected professional-services work through FutureCount.
-          </p>
-          <p class="fine">
-            Rising Senior is a product and service operated by FutureCount Holdings LLC.
-          </p>
-        </aside>
       </div>
     </section>
 
@@ -442,10 +425,6 @@
       <div class="wrap">
         <div class="section-heading">
           <h2>Operating lines</h2>
-          <p>
-            FutureCount Holdings LLC keeps the company structure simple. Rising Senior is the active product venture.
-            FutureCount professional services remains distinct and more selective.
-          </p>
         </div>
 
         <div class="business-grid">
