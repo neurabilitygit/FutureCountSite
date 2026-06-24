@@ -121,16 +121,31 @@
     .hero{
       min-height:calc(100svh - 72px);
       padding:0;
-      background:
-        linear-gradient(90deg, rgba(4,13,24,.94) 0%, rgba(4,13,24,.82) 31%, rgba(4,13,24,.38) 62%, rgba(4,13,24,.14) 100%),
-        linear-gradient(180deg, rgba(4,13,24,.30) 0%, rgba(4,13,24,.08) 42%, rgba(4,13,24,.58) 100%),
-        url("assets/img/rising-senior-operating-path.png");
+      background:#04111d url("assets/img/rising-senior-operating-path.png");
       background-size:cover;
       background-position:center;
       color:white;
       border-bottom:1px solid rgba(255,255,255,.08);
       position:relative;
       overflow:hidden;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:0;
+      background:
+        linear-gradient(90deg, rgba(4,13,24,.94) 0%, rgba(4,13,24,.82) 31%, rgba(4,13,24,.38) 62%, rgba(4,13,24,.14) 100%),
+        linear-gradient(180deg, rgba(4,13,24,.30) 0%, rgba(4,13,24,.08) 42%, rgba(4,13,24,.58) 100%);
+      pointer-events:none;
+    }
+    .hero-video{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
     .hero-grid{
       min-height:calc(100svh - 72px);
@@ -371,11 +386,10 @@
       nav{justify-content:flex-start;}
       .hero{
         min-height:calc(100svh - 124px);
-        background:
-          linear-gradient(180deg, rgba(4,13,24,.92) 0%, rgba(4,13,24,.72) 44%, rgba(4,13,24,.48) 100%),
-          url("assets/img/rising-senior-operating-path.png");
-        background-size:cover;
         background-position:58% center;
+      }
+      .hero::after{
+        background:linear-gradient(180deg, rgba(4,13,24,.92) 0%, rgba(4,13,24,.72) 44%, rgba(4,13,24,.48) 100%);
       }
       .hero-grid{
         min-height:calc(100svh - 124px);
@@ -412,6 +426,9 @@
 
   <main>
     <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/img/rising-senior-operating-path.png" aria-hidden="true">
+        <source src="assets/video/rising-senior-operating-path-loop.mp4" type="video/mp4" />
+      </video>
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <h1>Building focused software and service businesses.</h1>
