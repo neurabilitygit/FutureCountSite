@@ -31,15 +31,15 @@
     :root{
       --ink:#102033;
       --muted:#5f6d7d;
-      --soft:#f6f3ed;
-      --cream:#fffdf8;
-      --line:#e4ded2;
+      --soft:#dfe7e5;
+      --cream:#f3f6f3;
+      --line:rgba(89,109,119,.24);
       --gold:#c59a4a;
       --navy:#0b2742;
       --green:#456653;
       --rs:#df7b3f;
-      --panel:#ffffff;
-      --shadow:0 20px 55px rgba(20,34,52,.10);
+      --panel:rgba(250,252,250,.94);
+      --shadow:0 24px 60px rgba(8,25,39,.12);
     }
 
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -47,8 +47,8 @@
     body{
       font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       background:
-        linear-gradient(90deg, rgba(11,39,66,.04) 1px, transparent 1px),
-        linear-gradient(180deg, var(--cream), var(--soft));
+        linear-gradient(90deg, rgba(11,39,66,.045) 1px, transparent 1px),
+        linear-gradient(180deg, #edf2ef 0%, var(--cream) 38%, var(--soft) 100%);
       background-size:92px 92px, auto;
       color:var(--ink);
       line-height:1.55;
@@ -60,7 +60,7 @@
       position:sticky;
       top:0;
       z-index:10;
-      background:rgba(255,253,248,.88);
+      background:rgba(244,247,244,.88);
       backdrop-filter:blur(14px);
       border-bottom:1px solid var(--line);
     }
@@ -245,6 +245,7 @@
       border-radius:18px;
       padding:18px;
       box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
       min-height:0;
       display:flex;
       flex-direction:column;
@@ -252,8 +253,8 @@
       gap:12px;
     }
     .business.featured{
-      border-color:rgba(223,123,63,.42);
-      background:linear-gradient(135deg, #ffffff 0%, #fff7ef 100%);
+      border-color:rgba(88,128,137,.36);
+      background:linear-gradient(135deg, rgba(255,255,255,.96) 0%, rgba(236,243,241,.95) 100%);
       padding:22px;
     }
     .logo-row{
@@ -283,8 +284,8 @@
       align-items:center;
       padding:5px 8px;
       border-radius:999px;
-      background:#f2eadc;
-      color:var(--green);
+      background:rgba(69,102,83,.11);
+      color:#385846;
       font-size:10px;
       font-weight:800;
       white-space:nowrap;
@@ -332,7 +333,7 @@
       padding:8px 11px;
       border-radius:10px;
       font-size:12px;
-      box-shadow:0 6px 16px rgba(20,34,52,.06);
+      box-shadow:0 6px 16px rgba(8,25,39,.06);
     }
 
     .contact-band{
@@ -344,7 +345,7 @@
       align-items:center;
       justify-content:space-between;
       gap:24px;
-      box-shadow:var(--shadow);
+      box-shadow:0 26px 64px rgba(8,25,39,.18);
     }
     .contact-band h2{
       font-size:26px;
