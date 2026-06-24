@@ -1,46 +1,22 @@
-# FutureCount Editorial Site
+# FutureCount Holdings LLC Website
 
-Static website for GitHub Pages. No framework. No build step.
+Static GitHub Pages site for `futurecountllc.com`.
 
-Files:
-- index.html
-- services.html
-- about.html
-- faq.html
-- contact.html
-- assets/css/tokens.css
-- assets/css/global.css
-- assets/css/components.css
-- assets/js/main.js
+The site positions FutureCount Holdings LLC as the operating company behind two distinct lines of business:
 
-Draft note:
-- Replace the Book a Strategy Call button href on contact.html with your live calendar URL.
+- Rising Senior: a family-centric SaaS and coaching platform for the college-to-career transition.
+- FutureCount: professional services and advisory work for selected technology-driven growth and partner ecosystem engagements.
 
+## Files
 
-Clean URLs updated:
-- services/ (served from services/index.html)
-- about/ (served from about/index.html)
+- `index.html`: lightweight holding-company homepage
+- `contact.html`: Rising Senior link and 30-minute introductory call CTA
+- `services.html`: legacy services URL redirecting to the business-line section
+- `about.html`: legacy about URL redirecting to the founder section
+- `faq.html`: legacy FAQ URL redirecting to business lines
+- `privacy.html`: website privacy notice
+- `assets/logos/rising-senior-logo.png`: Rising Senior logo used to give Rising Senior stronger visual signal
 
-Palette update applied:
-- Parchment #F5EDE3
-- Warm Sand #E7DCCB
-- Dark Brown #2F2925
-- Mocha #5B524A
-- Deep Olive #5F6B3F
-- Forest Olive #4C5631
-- Rust #B24A2E
+## Deployment
 
-Rust palette update applied:
-- Header and footer now use the same rust accent family as the hero font accent
-- Warm parchment backgrounds retained
-- Structural accents shifted from olive to rust
-
-Logo contrast update applied:
-- Header and footer now use transparent light mark PNGs for better contrast on rust backgrounds
-- Standalone F section markers replaced with transparent rust mark PNGs on light surfaces
-
-Header/footer logo update applied:
-- Added assets/img/futurecount-logo-header-footer.png
-- Logo background matches header rust background
-- F mark enlarged to occupy approximately 85% of the logo image
-- Header and footer now use the exact same PNG asset
+GitHub Pages serves from the `main` branch root. The `CNAME` file keeps the custom domain at `futurecountllc.com`.

@@ -1,15 +1,16 @@
-
-FutureCount Website
+FutureCount Holdings LLC Website
 
 Purpose:
-Provide information about FutureCount consulting services focused on partner ecosystem strategy, technology partnerships, and ERP implementation ecosystems.
+Provide a lightweight public explanation of FutureCount Holdings LLC as the operating company behind FutureCount professional services and Rising Senior.
 
 Primary Topics:
-partner ecosystem strategy
-accounting firm advisory growth
-ERP implementation services
-modern finance platforms
-technology partnership strategy
+FutureCount Holdings LLC
+Rising Senior
+college-to-career transition
+family-centric SaaS and coaching
+professional services
+partner ecosystem advisory
 
 Founder: Eric Bass
 Website: https://futurecountllc.com
+Rising Senior: https://risingsenior.com
