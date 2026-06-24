@@ -10,21 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root{--ink:#102033;--muted:#5f6d7d;--soft:#f6f3ed;--cream:#fffdf8;--line:#e4ded2;--navy:#0b2742;--panel:#ffffff;}
+    :root{--ink:#102033;--muted:#5f6d7d;--soft:#dfe7e5;--cream:#f3f6f3;--line:rgba(89,109,119,.24);--navy:#0b2742;--green:#456653;--panel:rgba(250,252,250,.94);--shadow:0 24px 60px rgba(8,25,39,.12);}
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--cream),var(--soft));color:var(--ink);line-height:1.65;}
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(90deg,rgba(11,39,66,.045) 1px,transparent 1px),linear-gradient(180deg,#edf2ef 0%,var(--cream) 38%,var(--soft) 100%);background-size:92px 92px,auto;color:var(--ink);line-height:1.65;}
     a{color:inherit;text-decoration:none;font-weight:800;}
     .wrap{width:min(900px,calc(100% - 40px));margin:0 auto;}
-    header,footer{border-bottom:1px solid var(--line);background:rgba(255,253,248,.88);}
-    footer{border-top:1px solid var(--line);border-bottom:0;margin-top:56px;padding:24px 0;color:#647287;font-size:13px;}
+    header{border-bottom:1px solid var(--line);background:rgba(244,247,244,.88);backdrop-filter:blur(14px);}
+    footer{border-top:1px solid var(--line);background:rgba(244,247,244,.82);margin-top:56px;padding:24px 0;color:#647287;font-size:13px;}
     .header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
     .brand{display:flex;align-items:center;gap:12px;}
     .brand img{width:30px;height:30px;object-fit:contain;border-radius:7px;opacity:.76;}
     .brand strong{font-size:15px;color:var(--navy);}
+    .brand span{display:flex;flex-direction:column;line-height:1.1;}
+    .brand span span{font-size:11px;color:var(--muted);font-weight:700;}
     nav{display:flex;gap:10px;flex-wrap:wrap;}
     nav a{font-size:13px;color:var(--muted);padding:9px 11px;border-radius:999px;}
+    nav a:hover{background:rgba(69,102,83,.1);color:var(--ink);}
     main{padding:64px 0;}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:34px;}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow);backdrop-filter:blur(12px);}
     h1{font-size:clamp(36px,5vw,54px);line-height:1.06;color:var(--navy);letter-spacing:-.03em;margin-bottom:18px;}
     h2{font-size:22px;color:var(--navy);margin:28px 0 8px;}
     p,li{color:var(--muted);font-size:16px;margin-bottom:12px;}
@@ -38,7 +41,10 @@
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
         <img src="assets/img/futurecount-logo-header-footer-animated.svg" alt="" />
-        <strong>FutureCount Holdings LLC</strong>
+        <span>
+          <strong>FutureCount Holdings LLC</strong>
+          <span>Operating company</span>
+        </span>
       </a>
       <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>

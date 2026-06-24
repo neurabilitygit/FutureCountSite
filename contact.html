@@ -77,6 +77,16 @@
       opacity:.76;
     }
     .brand strong{font-size:15px;color:var(--navy);}
+    .brand span{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brand span span{
+      font-size:11px;
+      color:var(--muted);
+      font-weight:700;
+    }
     nav{display:flex;gap:10px;flex-wrap:wrap;}
     nav a{
       font-size:13px;
@@ -186,6 +196,7 @@
     }
     footer{
       border-top:1px solid var(--line);
+      background:rgba(244,247,244,.82);
       padding:24px 0;
       color:#647287;
       font-size:13px;
@@ -204,7 +215,10 @@
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
         <img src="assets/img/futurecount-logo-header-footer-animated.svg" alt="" />
-        <strong>FutureCount Holdings LLC</strong>
+        <span>
+          <strong>FutureCount Holdings LLC</strong>
+          <span>Operating company</span>
+        </span>
       </a>
       <nav aria-label="Primary navigation">
         <a href="index.html#businesses">Portfolio</a>
