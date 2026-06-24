@@ -126,23 +126,6 @@
       color:white;
       border-bottom:1px solid rgba(255,255,255,.08);
     }
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      font-size:12px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      color:#d8c7a7;
-      margin-bottom:18px;
-    }
-    .eyebrow::before{
-      content:"";
-      width:34px;
-      height:2px;
-      background:var(--gold);
-    }
     .hero-grid{
       display:block;
       max-width:1160px;
@@ -392,9 +375,8 @@
       border-radius:20px;
       padding:26px;
       box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
+      max-width:820px;
+      margin:0 auto;
     }
     .about-panel h2{
       font-size:27px;
@@ -493,7 +475,6 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Massachusetts LLC</div>
           <h1>Building focused software and service businesses.</h1>
           <p class="lead">
             FutureCount Holdings LLC operates Rising Senior, a family-centric SaaS and coaching platform for the
@@ -611,16 +592,6 @@
             <p>
               Rising Senior extends that operating experience into a new family and education context:
               helping households, students, and coaches make the college-to-career transition clearer and more manageable.
-            </p>
-          </div>
-          <div>
-            <h2>Why this structure</h2>
-            <p>
-              The holding-company structure keeps the legal and ownership picture clear while allowing each business line to keep its own audience,
-              brand, and purpose.
-            </p>
-            <p>
-              FutureCount Holdings LLC is the operating company. Rising Senior is the active product venture. FutureCount professional services remains available for selected advisory work.
             </p>
           </div>
         </div>
