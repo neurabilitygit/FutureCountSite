@@ -1,10 +1,18 @@
 name: Notify search engines with IndexNow
 
 on:
-  workflow_run:
-    workflows: [pages build and deployment]
-    types: [completed]
+  push:
     branches: [main]
+    paths:
+      - '**.html'
+      - 'assets/**'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'llms.txt'
+      - 'indexnow-key.txt'
+      - 'scripts/notify_indexnow.py'
+      - 'scripts/check_discovery.py'
+      - '.github/workflows/indexnow.yml'
   workflow_dispatch:
 
 permissions:
@@ -16,15 +24,16 @@ concurrency:
 
 jobs:
   notify:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Validate the release before notification
+        run: |
+          python scripts/check_site.py
+          python scripts/check_discovery.py
       - name: Notify participating search engines after verifying the live release
         run: python scripts/notify_indexnow.py --wait-for-live 180
