@@ -27,3 +27,9 @@ Manrope is self-hosted; its OFL license is included. Images are supplied by the 
 ## Recovery
 
 Use Git history to restore a previous release if needed. Prefer a new revert commit over rewriting the branch history. Keep the custom domain configuration when reverting.
+
+## Search discovery
+
+The four primary pages contain descriptive search titles and JSON-LD identifying FutureCount Holdings LLC, Eric Bass and the diagnostic service. The homepage retains the Bing verification tag. Google ownership is verified through the existing domain provider record; preserve that record.
+
+Run `python3 scripts/check_discovery.py` to validate identity and IndexNow configuration. After successful GitHub Pages publication, the IndexNow workflow verifies that the four changed pages and public ownership proof match the deployed commit, then notifies participating search engines of the seven canonical sitemap URLs. The workflow can also be started manually. Receipt of a notification does not guarantee crawling, indexing or inclusion in AI answers. The IndexNow text file is public website-ownership proof, not a private account credential.
