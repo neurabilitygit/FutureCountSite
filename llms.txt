@@ -1,16 +1,11 @@
-FutureCount Holdings LLC Website
+# FutureCount
 
-Purpose:
-Provide a lightweight public explanation of FutureCount Holdings LLC as the operating company behind FutureCount professional services and Rising Senior.
+FutureCount Holdings LLC is led by Eric Bass. It helps owners of small and midsize businesses strengthen their companies, develop a practical strategy, and implement it. Goals may include growth, continued family ownership, an ownership transition or a strategic sale.
 
-Primary Topics:
-FutureCount Holdings LLC
-Rising Senior
-college-to-career transition
-family-centric SaaS and coaching
-professional services
-partner ecosystem advisory
+## Pages
+- [Why I created FutureCount](https://futurecountllc.com/)
+- [How I work](https://futurecountllc.com/diagnostic.html): Business Diagnostic, strategy and implementation.
+- [About Eric](https://futurecountllc.com/about.html): Selected experience and public sources.
+- [Talk with Eric](https://futurecountllc.com/contact.html): A 30-minute introductory conversation; separate from a scoped Business Diagnostic engagement.
 
-Founder: Eric Bass
-Website: https://futurecountllc.com
-Rising Senior: https://risingsenior.com
+Website information is general and does not replace professional tax, legal or investment advice.

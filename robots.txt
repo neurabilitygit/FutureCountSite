@@ -1,4 +1,3 @@
-
 User-agent: *
 Allow: /
 Sitemap: https://futurecountllc.com/sitemap.xml
