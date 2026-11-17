@@ -10,6 +10,7 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+APPROVED_EMAIL = 'eric@futurecountllc.com'
 PAGES = ('index.html', 'diagnostic.html', 'about.html', 'contact.html',
          'privacy.html', 'terms.html', 'accessibility.html')
 BOOKING = 'https://app.simplymeet.me/futurecount/futurecount-introductory-call'
@@ -53,7 +54,9 @@ def check_site():
         ids = [a['id'] for _, a in document.nodes if 'id' in a]
         check(len(ids) == len(set(ids)), f'{name}: duplicate IDs')
         check(not re.search(r'private preview|live website unchanged|preview version|before publication|127\.0\.0\.1|localhost|/Users/', source, re.I), f'{name}: working-copy content remains')
-        check(not re.search(r'rising\s*senior|risingsenior|operate as one|eric@|mailto:', source, re.I), f'{name}: retired or exposed-contact content remains')
+        check(not re.search(r'rising\s*senior|risingsenior|operate as one', source, re.I), f'{name}: retired copy remains')
+        published = re.findall(r'mailto:([^"\'>\s?]+)', source, re.I) + re.findall(r'[\w.+-]+@[\w-]+\.[\w.]+', source)
+        check(all(a.lower() == APPROVED_EMAIL for a in published), f'{name}: unapproved contact details')
         for tag, attrs in document.nodes:
             if tag == 'img':
                 image_count += 1
@@ -68,6 +71,9 @@ def check_site():
                 if not value:
                     continue
                 parsed = urlsplit(value)
+                if parsed.scheme == 'mailto':
+                    check(value.lower() == f'mailto:{APPROVED_EMAIL}', f'{name}: unapproved contact link {value}')
+                    continue
                 if parsed.scheme or parsed.netloc:
                     check(parsed.scheme == 'https', f'{name}: non-HTTPS resource {value}')
                     continue

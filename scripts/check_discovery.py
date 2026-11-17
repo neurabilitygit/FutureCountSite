@@ -8,6 +8,7 @@ from notify_indexnow import payload
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://futurecountllc.com/'
+APPROVED_EMAIL = 'eric@futurecountllc.com'
 EXPECTED = {
     'index.html': 'FutureCount | CFO and Sale-Readiness Advice for Owners and CEOs',
     'diagnostic.html': 'How I Work: Deep-Dive & Direction and Sale Readiness | FutureCount',
@@ -42,7 +43,8 @@ def main():
         check(org['founder']['@id'] == person['@id'], name + ': founder connection')
         check('worksFor' not in person, name + ': client employers kept confidential')
         check(person['jobTitle'] == 'Chief Financial Officer', name + ': exact title')
-        check(not re.search(r'"(?:email|telephone|address)"\s*:', scripts[0]), name + ': unapproved contact details')
+        fields = re.findall(r'"(email|telephone|address)"\s*:\s*"([^"]*)"', scripts[0])
+        check(all(k == 'email' and v == APPROVED_EMAIL for k, v in fields), name + ': unapproved contact details')
         check('<meta name="robots" content="index,follow">' in text, name + ': indexing enabled')
         if name == 'diagnostic.html':
             check(any(e['@type'] == 'Service' for e in entities), name + ': service identity')
