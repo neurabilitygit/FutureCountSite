@@ -9,9 +9,9 @@ from notify_indexnow import payload
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://futurecountllc.com/'
 EXPECTED = {
-    'index.html': 'Business Advisory for Owners | FutureCount',
-    'diagnostic.html': 'Business Diagnostics & Implementation | FutureCount',
-    'about.html': 'Eric Bass | Founder & Business Adviser | FutureCount',
+    'index.html': 'FutureCount | CFO and Sale-Readiness Advice for Owners and CEOs',
+    'diagnostic.html': 'How I Work: Deep-Dive & Direction and Sale Readiness | FutureCount',
+    'about.html': 'Eric Bass | Founder & Managing Partner | FutureCount',
     'contact.html': 'Talk with Eric Bass | FutureCount',
 }
 
