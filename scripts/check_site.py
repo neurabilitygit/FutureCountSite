@@ -56,6 +56,7 @@ def check_site():
         check(len(ids) == len(set(ids)), f'{name}: duplicate IDs')
         check(not re.search(r'private preview|live website unchanged|preview version|before publication|127\.0\.0\.1|localhost|/Users/', source, re.I), f'{name}: working-copy content remains')
         check(not re.search(r'rising\s*senior|risingsenior|operate as one', source, re.I), f'{name}: retired copy remains')
+        check(not re.search(r'neural\s*seek|\btech\s*d\b', source, re.I), f'{name}: confidential client name present')
         published = re.findall(r'mailto:([^"\'>\s?]+)', source, re.I) + re.findall(r'[\w.+-]+@[\w-]+\.[\w.]+', source)
         check(all(a.lower() == APPROVED_EMAIL for a in published), f'{name}: unapproved contact details')
         for tag, attrs in document.nodes:
