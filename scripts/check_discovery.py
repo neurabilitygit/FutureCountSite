@@ -40,7 +40,7 @@ def main():
         check(org['legalName'] == 'FutureCount Holdings LLC', name + ': legal entity')
         check(person['name'] == 'Eric Bass', name + ': founder')
         check(org['founder']['@id'] == person['@id'], name + ': founder connection')
-        check({e['name'] for e in person['worksFor']} == {'NeuralSeek', 'TechD'}, name + ': approved current roles')
+        check('worksFor' not in person, name + ': client employers kept confidential')
         check(person['jobTitle'] == 'Chief Financial Officer', name + ': exact title')
         check(not re.search(r'"(?:email|telephone|address)"\s*:', scripts[0]), name + ': unapproved contact details')
         check('<meta name="robots" content="index,follow">' in text, name + ': indexing enabled')
