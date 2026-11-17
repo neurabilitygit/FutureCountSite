@@ -12,7 +12,8 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 APPROVED_EMAIL = 'eric@futurecountllc.com'
 PAGES = ('index.html', 'diagnostic.html', 'financial-services.html', 'about.html',
-         'contact.html', 'privacy.html', 'terms.html', 'accessibility.html')
+         'contact.html', 'privacy.html', 'terms.html', 'accessibility.html',
+         'insights/index.html', 'insights/quality-of-earnings.html')
 BOOKING = 'https://app.simplymeet.me/futurecount/futurecount-introductory-call'
 
 
@@ -89,14 +90,14 @@ def check_site():
         if name in PAGES:
             check(bool(document.find('meta', name='description')), f'{name}: missing description')
             check(bool(document.find('meta', name='robots', content='index,follow')), f'{name}: indexing disabled')
-            expected = 'https://futurecountllc.com/' + ('' if name == 'index.html' else name)
+            expected = 'https://futurecountllc.com/' + name.removesuffix('index.html')
             check(bool(document.find('link', rel='canonical', href=expected)), f'{name}: wrong canonical')
             check(bool(document.find('a', href='#main')), f'{name}: missing skip link')
             check(bool(document.find('main', id='main')), f'{name}: missing main landmark')
             check(bool(document.find('nav', id='navigation')), f'{name}: missing navigation')
             check(bool(document.find('button', **{'aria-controls': 'navigation', 'aria-expanded': 'false'})), f'{name}: menu missing state')
             for legal in ('privacy.html', 'terms.html', 'accessibility.html'):
-                check(bool(document.find('a', href=legal)), f'{name}: missing {legal} footer link')
+                check(bool(document.find('a', href=legal) or document.find('a', href='/' + legal)), f'{name}: missing {legal} footer link')
     for name in PAGES:
         check((ROOT / name).is_file(), f'Missing primary page {name}')
     contact = documents.get((ROOT / 'contact.html').resolve())
@@ -107,7 +108,7 @@ def check_site():
     check('Disallow: /' not in robots and 'Sitemap: https://futurecountllc.com/sitemap.xml' in robots, 'Invalid production robots')
     sitemap = ET.parse(ROOT / 'sitemap.xml')
     locations = {e.text for e in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
-    expected_locations = {'https://futurecountllc.com/' + ('' if p == 'index.html' else p) for p in PAGES}
+    expected_locations = {'https://futurecountllc.com/' + p.removesuffix('index.html') for p in PAGES}
     check(locations == expected_locations, 'Sitemap does not match primary pages')
     css = (ROOT / 'assets/diagnostic.css').read_text()
     for resource in re.findall(r'url\([\'\"]?([^\)\'\"]+)', css):

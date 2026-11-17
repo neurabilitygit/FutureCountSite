@@ -5,7 +5,9 @@ The public website for FutureCount Holdings LLC, led by Eric Bass.
 ## Pages
 
 - Home: why Eric created FutureCount, owner decisions and selected experience.
-- How I work: Business Diagnostic, custom strategy and implementation.
+- How I work: Deep-Dive & Direction, sale readiness and implementation.
+- Financial services: company-side readiness for broker-dealers and fintechs.
+- Insights: practical articles for owners and CEOs, starting with quality of earnings for fintech businesses.
 - About Eric: experience, current CFO roles and public career sources.
 - Talk with Eric: the existing 30-minute SimplyMeet booking link.
 - Privacy notice, website terms and accessibility statement.
@@ -30,6 +32,6 @@ Use Git history to restore a previous release if needed. Prefer a new revert com
 
 ## Search discovery
 
-The four primary pages contain descriptive search titles and JSON-LD identifying FutureCount Holdings LLC, Eric Bass and the diagnostic service. The homepage retains the Bing verification tag. Google ownership is verified through the existing domain provider record; preserve that record.
+The main pages and Insights pages contain descriptive search titles and JSON-LD identifying FutureCount Holdings LLC, Eric Bass and the relevant page, service or article. The homepage retains the Bing verification tag. Google ownership is verified through the existing domain provider record; preserve that record.
 
-Run `python3 scripts/check_discovery.py` to validate identity and IndexNow configuration. After successful GitHub Pages publication, the IndexNow workflow verifies that the four changed pages and public ownership proof match the deployed commit, then notifies participating search engines of the seven canonical sitemap URLs. The workflow can also be started manually. Receipt of a notification does not guarantee crawling, indexing or inclusion in AI answers. The IndexNow text file is public website-ownership proof, not a private account credential.
+Run `python3 scripts/check_discovery.py` to validate identity and IndexNow configuration. After successful GitHub Pages publication, the IndexNow workflow verifies that the home, diagnostic, about and contact pages and public ownership proof match the deployed commit, then notifies participating search engines of the ten canonical sitemap URLs. Verify new article pages and assets against the deployed release as well. The workflow can also be started manually. Receipt of a notification does not guarantee crawling, indexing or inclusion in AI answers. The IndexNow text file is public website-ownership proof, not a private account credential.
