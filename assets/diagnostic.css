@@ -88,6 +88,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 .review-list li:last-child{border-bottom:0;padding-bottom:0}
 .review-list h3{font-size:22px;margin-bottom:8px}
 .review-list p{font-size:16px;color:var(--muted)}
+.financial-page .band-head{margin-bottom:28px}
+.financial-page .band-list p{color:#EDF1FF}
+@media(min-width:761px){
+  .financial-page .band-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px);align-items:start;margin-bottom:34px}
+  .financial-page .band-head .section-description{margin-top:0;max-width:480px}
+  .financial-page .band-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(30px,5vw,60px)}
+  .financial-page .band-list li{padding:20px 0;border-top:1px solid #6B85CF;border-bottom:0}
+  .financial-page .band-list li:last-child{grid-column:1/-1;padding-bottom:0}
+}
 .experience-list{list-style:none;padding:0;margin:0}
 .experience-list li{padding:24px 0;border-bottom:1px solid var(--line)}
 .experience-list li:first-child{padding-top:0}
