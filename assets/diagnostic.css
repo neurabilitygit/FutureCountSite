@@ -110,6 +110,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 .contact-copy h2{font-size:28px;margin-bottom:20px}
 .contact-copy p{max-width:660px;color:var(--muted)}
 .contact-copy .button{margin-top:27px}
+.contact-copy h3{font-size:20px;margin:36px 0 10px}
 .footer{padding:28px 0;background:var(--pale);border-top:1px solid var(--line)}
 .footer-top{display:flex;justify-content:space-between;align-items:center;gap:30px}
 .footer .brand{font-size:23px}
