@@ -23,7 +23,7 @@ if (menuButton && navigation) {
     link.addEventListener('click', () => setMenu(false));
   });
 
-  matchMedia('(min-width:861px)').addEventListener('change', event => {
+  matchMedia('(min-width:1001px)').addEventListener('change', event => {
     if (event.matches) setMenu(false);
   });
 }
