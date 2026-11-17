@@ -13,6 +13,7 @@ EXPECTED = {
     'diagnostic.html': 'How I Work: Deep-Dive & Direction and Sale Readiness | FutureCount',
     'about.html': 'Eric Bass | Founder & Managing Partner | FutureCount',
     'contact.html': 'Talk with Eric Bass | FutureCount',
+    'financial-services.html': 'Financial Services: Broker-Dealers and Fintechs | FutureCount',
 }
 
 
@@ -48,7 +49,7 @@ def main():
             check(any(e['@type'] == 'Service' for e in entities), name + ': service identity')
     check('<meta name="msvalidate.01" content="5567235F49EF43552337FC29DB1E0E0D">' in (ROOT / 'index.html').read_text(), 'Bing verification tag')
     data = payload()
-    check(len(data['urlList']) == 7, 'IndexNow has seven canonical pages')
+    check(len(data['urlList']) == 8, 'IndexNow has eight canonical pages')
     check(data['keyLocation'] == BASE + 'indexnow-key.txt', 'Correct IndexNow proof location')
     check('User-agent: *\nAllow: /' in (ROOT / 'robots.txt').read_text(), 'Crawler access preserved')
     print(f'{assertions} discovery checks passed')

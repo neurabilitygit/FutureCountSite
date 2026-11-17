@@ -10,8 +10,8 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ('index.html', 'diagnostic.html', 'about.html', 'contact.html',
-         'privacy.html', 'terms.html', 'accessibility.html')
+PAGES = ('index.html', 'diagnostic.html', 'financial-services.html', 'about.html',
+         'contact.html', 'privacy.html', 'terms.html', 'accessibility.html')
 BOOKING = 'https://app.simplymeet.me/futurecount/futurecount-introductory-call'
 
 
